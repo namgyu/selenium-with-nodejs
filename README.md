@@ -1,1 +1,6 @@
-selenium-with-node
+# selenium-with-node
+
+## Usage
+```
+$ npm test
+```
