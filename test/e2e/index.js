@@ -1,7 +1,7 @@
 const browserName = 'chrome';   // choose 'chrome' or 'firefox'
 const { Builder, By, Key, until } = require('selenium-webdriver');
 const driver = new Builder().forBrowser(browserName)
-                            .usingServer('http://192.168.0.7:4444/wd/hub')
+                            .usingServer('http://192.168.0.6:4444/wd/hub')
                             .build();
 
 try {
