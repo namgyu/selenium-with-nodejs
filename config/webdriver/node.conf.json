@@ -2,18 +2,23 @@
     "capabilities":
     [
       {
+        "browserName": "firefox",
+        "marionette": true,
+        "maxInstances": 5,
+        "seleniumProtocol": "WebDriver"
+      },
+      {
         "browserName": "chrome",
-        "platform": "MAC",
         "maxInstances": 5,
         "seleniumProtocol": "WebDriver"
       }
     ],
     "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
     "maxSession": 5,
-    "port": 5555,
+    "port": 6666,
     "register": true,
     "registerCycle": 5000,
-    "hub": "http://10.5.220.184:4444",
+    "hub": "http://192.168.0.6:4444",
     "nodeStatusCheckTimeout": 5000,
     "nodePolling": 5000,
     "role": "node",
@@ -23,4 +28,4 @@
     "servlets" : [],
     "withoutServlets": [],
     "custom": {}
-  }
+}

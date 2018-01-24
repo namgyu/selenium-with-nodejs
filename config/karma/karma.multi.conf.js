@@ -1,5 +1,5 @@
 var webdriverConfig = {
-  hostname: '192.168.0.7',
+  hostname: '192.168.0.6',
   port: 4444,
   remoteHost: true
 };
@@ -11,12 +11,12 @@ module.exports = function(config) {
       files: [
         'chai.conf.js',
         'src/js/*.js',
-        'test/*.js'
+        'test/unit/*.spec.js'
       ],
       exclude: [],
       preprocessors: {
         'src/**/*.js': ['babel'],
-        'test/**/*.js': ['babel']
+        'test/unit/*.spec.js': ['babel']
       },
       babelPreprocessor: {
         options: {
@@ -37,23 +37,30 @@ module.exports = function(config) {
       // autoWatch: true,
       // browsers: ['Chrome'],
       customLaunchers: {
-        'chrome': {
+        chrome: {
             base: 'WebDriver',
             config: webdriverConfig,
             browserName: 'chrome'
         },
-        'firefox': {
-            base: 'WebDriver',
-            config: webdriverConfig,
-            browserName: 'firefox'
-        }
-    },
-    browsers: [
-        'chrome',
-        'firefox'
-    ],
+        // firefox: {
+        //     base: 'WebDriver',
+        //     config: webdriverConfig,
+        //     browserName: 'firefox'
+        // }
+      },
+      browsers: [
+          'chrome',
+          // 'firefox'
+      ],
+      // plugins: [
+      //   'karma-babel-preprocessor',
+      //   'karma-chai',
+      //   'karma-mocha',
+      //   'karma-webdriver-launcher',
+      //   'karma-mocha-reporter'
+      // ],
       singleRun: false,
       concurrency: Infinity
     })
-  }
+}
   

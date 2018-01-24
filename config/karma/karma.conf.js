@@ -5,12 +5,12 @@ module.exports = function(config) {
       files: [
         'chai.conf.js',
         'src/js/*.js',
-        'test/*.js'
+        'test/unit/*.spec.js'
       ],
       exclude: [],
       preprocessors: {
         'src/**/*.js': ['babel'],
-        'test/**/*.js': ['babel']
+        'test/unit/*.spec.js': ['babel']
       },
       babelPreprocessor: {
         options: {
