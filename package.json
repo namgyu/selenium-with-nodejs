@@ -4,7 +4,9 @@
   "description": "selenium-with-node",
   "main": "",
   "scripts": {
-    "test": "node src/test/*"
+    "test": "node src/test/*",
+    "start:hub": "java -jar selenium-webdriver/selenium-server-standalone-3.8.1.jar -role hub -hubConfig hub.conf.json",
+    "start:node": "java -jar selenium-webdriver/selenium-server-standalone-3.8.1.jar -role node -nodeConfig node.conf.json"    
   },
   "author": "namgyu",
   "license": "MIT",
