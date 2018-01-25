@@ -9,14 +9,14 @@ module.exports = function(config) {
       basePath: '',
       frameworks: ['mocha', 'chai'],
       files: [
-        'chai.conf.js',
-        'src/js/*.js',
-        'test/unit/*.spec.js'
+        '../chai/chai.conf.js',
+        '../../src/js/*.js',
+        '../../test/unit/*.spec.js'
       ],
       exclude: [],
       preprocessors: {
-        'src/**/*.js': ['babel'],
-        'test/unit/*.spec.js': ['babel']
+        '../../src/**/*.js': ['babel'],
+        '../../test/unit/*.spec.js': ['babel']
       },
       babelPreprocessor: {
         options: {
