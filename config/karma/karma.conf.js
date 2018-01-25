@@ -1,28 +1,20 @@
 module.exports = function(config) {
     config.set({
       basePath: '',
-      frameworks: ['mocha', 'chai'],
+      frameworks: ['browserify', 'mocha', 'chai'],
+      browserify: {
+        debug: true,
+        transform: [
+          ['babelify', {plugins: ['babel-plugin-espower']}]
+        ]
+      },
       files: [
         '../chai/chai.conf.js',
-        '../../src/js/*.js',
         '../../test/unit/*.spec.js'
       ],
       exclude: [],
-      preprocessors: {
-        '../../src/**/*.js': ['babel'],
-        '../../test/unit/*.spec.js': ['babel']
-      },
-      babelPreprocessor: {
-        options: {
-          presets: ['env'],
-          sourceMap: 'inline'
-        },
-        filename: function (file) {
-          return file.originalPath.replace(/\.js$/, '.es5.js');
-        },
-        sourceFileName: function (file) {
-          return file.originalPath;
-        }
+      preprocessors: {      
+        '../../test/unit/*.spec.js': 'browserify'
       },
       reporters: ['progress', 'mocha'],
       port: 9876,

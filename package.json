@@ -12,6 +12,18 @@
   },
   "author": "namgyu",
   "license": "MIT",
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "env"
+          ]
+        }
+      ]
+    ]
+  },
   "dependencies": {
     "chai": "^3.5.0",
     "karma-webdriver-launcher": "^1.0.5",
@@ -20,16 +32,18 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
+    "babel-plugin-espower": "^2.4.0",
     "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0",
     "browserify": "^15.2.0",
     "chromedriver": "^2.34.1",
     "karma": "^2.0.0",
-    "karma-babel-preprocessor": "^7.0.0",
     "karma-browserify": "^5.1.3",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-mocha": "^1.3.0",
     "karma-mocha-reporter": "^2.2.5",
+    "power-assert": "^1.4.4",
     "watchify": "^3.9.0"
   }
 }
