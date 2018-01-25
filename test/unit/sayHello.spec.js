@@ -1,6 +1,15 @@
-describe('sayHello.js', function() {
+import sayHello from '../../src/js/sayHello';
+
+describe('sayHello', function() {
     it('says hello', function() {
-        expect(sayHello()).be.equal('Hello');
-        expect(sayHello()).not.equal('HiHi');
+        /** 
+         *  chai
+         */
+        expect(sayHello()).be.equal('Helo');
+
+        /** 
+         *  power-assert
+         */
+        // assert(sayHello() === 'Helo');
     });
 });

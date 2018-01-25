@@ -7,3 +7,5 @@ class Hello {
       return `Hello, ${this.name}!`;
     }
 }
+
+export default Hello;

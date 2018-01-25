@@ -1,7 +1,9 @@
-describe('Hello.js', () => {
-    it('says hello', () => {
-      const hello = new Hello('Babel');
+import Hello from '../../src/js/Hello';
 
-      expect(hello.say()).be.equal('Hello, Babel!');
+describe('Hello', () => {
+    it('says hello world', () => {
+      const hello = new Hello('World');
+
+      expect(hello.say()).be.equal('Hello, World!');
     });
 });
