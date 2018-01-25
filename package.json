@@ -1,7 +1,7 @@
 {
-  "name": "selenium-with-node",
+  "name": "selenium-with-nodejs",
   "version": "1.0.0",
-  "description": "selenium-with-node",
+  "description": "selenium-with-nodejs",
   "main": "",
   "scripts": {
     "start:hub": "java -jar webdriver/selenium-server-standalone-3.8.1.jar -role hub -hubConfig config/webdriver/hub.conf.json",
