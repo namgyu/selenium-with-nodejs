@@ -13,7 +13,8 @@ module.exports = function(config) {
         '../../test/unit/*.spec.js'
       ],
       exclude: [],
-      preprocessors: {      
+      preprocessors: {
+        '../chai/chai.conf.js': 'browserify',
         '../../test/unit/*.spec.js': 'browserify'
       },
       reporters: ['progress', 'mocha'],
@@ -26,4 +27,3 @@ module.exports = function(config) {
       concurrency: Infinity
     })
 }
-  
