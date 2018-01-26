@@ -1,15 +1,7 @@
 import sayHello from '../../src/js/sayHello';
 
-describe('sayHello', function() {
-    it('says hello', function() {
-        /** 
-         *  chai
-         */
+describe('sayHello', () => {
+    it('says hello', () => {
         expect(sayHello()).be.equal('Helo');
-
-        /** 
-         *  power-assert
-         */
-        // assert(sayHello() === 'Helo');
     });
 });
