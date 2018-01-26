@@ -1,6 +1,6 @@
 import 'chromedriver';
 import webdriver from 'selenium-webdriver';
-import remoteInfo from '../constants/remoteInfo';
+import REMOTE_INFO from '../constants/remoteInfo';
 
 webdriver.promise.USE_PROMISE_MANAGER = false;
 
@@ -10,7 +10,7 @@ export default class DriverBuilder {
 
         if (props.remote) {
             builder = new webdriver.Builder().forBrowser(props.browser)
-                                             .usingServer(remoteInfo.hub);
+                                             .usingServer(REMOTE_INFO.HUB);
         } else {
             builder = new webdriver.Builder().forBrowser(props.browser)
         }
